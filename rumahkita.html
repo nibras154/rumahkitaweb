@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RumahKita</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#ffffff;
+}
+
+/*==========================
+        NAVBAR
+===========================*/
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 80px;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    z-index:999;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#2E86FF;
+}
+
+.logo span{
+    color:#2E86FF;
+}
+
+nav ul{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#2E86FF;
+}
+
+/*==========================
+        HERO
+===========================*/
+
+#home{
+
+    width:100%;
+    height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1800");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:100px;
+
+}
+
+.hero{
+
+    color:white;
+    max-width:650px;
+
+}
+
+.hero h1{
+
+    font-size:68px;
+    line-height:80px;
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+    line-height:36px;
+    margin-bottom:40px;
+
+}
+
+.btn{
+
+    display:inline-block;
+    text-decoration:none;
+
+    padding:18px 45px;
+
+    background:#2E86FF;
+
+    color:white;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#176AE0;
+    transform:translateY(-3px);
+
+}
+
+/*==========================
+      RESPONSIVE
+===========================*/
+
+@media(max-width:900px){
+
+nav{
+
+padding:0 30px;
+
+}
+
+.hero{
+
+max-width:100%;
+
+}
+
+.hero h1{
+
+font-size:45px;
+line-height:55px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+nav ul{
+
+gap:18px;
+
+}
+
+}
+/*==========================
+        ABOUT US
+===========================*/
+
+#about{
+
+padding:100px 90px;
+
+background:white;
+
+}
+
+.about-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.about-title h1{
+
+font-size:46px;
+
+color:#2E86FF;
+
+margin-bottom:15px;
+
+}
+
+.about-title p{font-size:18px;color:#666;}
+.about-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:70px;
+flex-wrap:wrap;
+}
+
+.about-image{
+
+flex:1;
+
+}
+
+.about-image img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.about-content{
+
+flex:1;
+
+}
+
+.about-content h2{
+
+font-size:42px;
+
+margin-bottom:25px;
+
+color:#222;
+
+}
+
+.about-content p{
+
+font-size:18px;
+
+line-height:34px;
+
+color:#666;
+
+margin-bottom:20px;
+
+}
+
+.about-list{
+
+margin-top:35px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+
+}
+
+.item{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+.icon{
+
+width:50px;
+
+height:50px;
+
+background:#2E86FF;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+font-size:22px;
+
+font-weight:bold;
+
+}
+
+.item h3{
+
+font-size:20px;
+
+margin-bottom:5px;
+
+}
+
+.item span{
+
+color:#666;
+
+}
+
+@media(max-width:900px){
+
+#about{
+
+padding:80px 30px;
+
+}
+
+.about-container{
+
+flex-direction:column;
+
+}
+
+.about-content{
+
+text-align:center;
+
+}
+
+.item{
+
+justify-content:center;
+
+}
+
+}
+/*==========================
+        JASA
+===========================*/
+
+#jasa{
+
+padding:100px 90px;
+
+background:#F5F8FD;
+
+}
+
+.jasa-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.jasa-title h1{
+
+font-size:46px;
+
+color:#2E86FF;
+
+margin-bottom:10px;
+
+}
+
+.jasa-title p{
+
+color:#666;
+
+font-size:18px;
+
+}
+
+.jasa-container{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 35px rgba(0,0,0,.18);
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.card h2{
+
+padding:20px;
+
+font-size:26px;
+
+}
+
+.card p{
+
+padding:0 20px;
+
+line-height:30px;
+
+color:#666;
+
+}
+
+.card a{
+
+display:inline-block;
+
+margin:25px 20px 25px;
+
+padding:12px 30px;
+
+background:#2E86FF;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.card a:hover{
+
+background:#1669dc;
+
+}
+
+@media(max-width:1000px){
+
+.jasa-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.jasa-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*==========================
+        FOOTER
+===========================*/
+
+#footer{
+
+margin-top:100px;
+
+background:#2E86FF;
+
+color:white;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.wave{
+
+position:absolute;
+
+top:-80px;
+
+left:0;
+
+width:100%;
+
+height:180px;
+
+background:white;
+
+clip-path:polygon(0 100%,100% 40%,100% 0,0 0);
+
+}
+
+.footer-container{
+
+position:relative;
+
+padding:130px 90px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+flex-wrap:wrap;
+
+gap:60px;
+
+}
+
+.footer-logo{
+
+max-width:380px;
+
+}
+
+.footer-logo h2{
+
+font-size:38px;
+
+margin-bottom:20px;
+
+}
+
+.footer-logo span{
+
+color:#ffffff;
+
+}
+
+.footer-logo p{
+
+line-height:32px;
+
+}
+
+.footer-menu h3,
+
+.footer-contact h3{
+
+margin-bottom:20px;
+
+font-size:24px;
+
+}
+
+.footer-menu ul{
+
+list-style:none;
+
+}
+
+.footer-menu li{
+
+margin-bottom:15px;
+
+}
+
+.footer-menu a{
+
+color:white;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.footer-menu a:hover{
+
+padding-left:8px;
+
+}
+
+.footer-contact p{
+
+margin-bottom:15px;
+
+}
+
+.copyright{
+
+text-align:center;
+
+padding:25px;
+
+background:rgba(0,0,0,.12);
+
+font-size:15px;
+
+}
+
+@media(max-width:900px){
+
+.footer-container{
+
+flex-direction:column;
+
+padding:130px 30px 50px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ====================== NAVBAR ====================== -->
+
+<nav>
+
+<div class="logo">
+Rumah<span>Kita</span>
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">Tentang Kami</a></li>
+
+<li><a href="#jasa">Jasa</a></li>
+
+<li><a href="#footer">Lain-Lain</a></li>
+
+</ul>
+
+</nav>
+
+<!-- ====================== HERO ====================== -->
+
+<section id="home">
+
+<div class="hero">
+
+<h1>
+Cari Kebutuhan<br>
+Rumahmu Disini!
+</h1>
+
+<p>
+
+Website penyedia jasa tukang profesional
+untuk berbagai kebutuhan rumah Anda
+dengan cepat, aman, dan terpercaya.
+
+</p>
+
+<a href="#about" class="btn">
+
+Jelajahi RumahKita →
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ======================
+SECTION SELANJUTNYA
+AKAN DIBUAT PADA PART 2
+====================== -->
+
+<section id="about">
+
+<div class="about-title">
+
+<h1>Tentang Kami</h1>
+
+<p>
+Kenali lebih dekat layanan RumahKita yang siap membantu
+segala kebutuhan rumah Anda.
+</p>
+
+</div>
+
+<div class="about-container">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" alt="About RumahKita">
+
+</div>
+
+<div class="about-content">
+
+<h2>
+Apa itu RumahKita?
+</h2>
+
+<p>
+
+RumahKita merupakan website penyedia jasa tukang
+profesional yang membantu masyarakat menemukan
+tenaga kerja terpercaya untuk berbagai kebutuhan
+rumah seperti listrik, pipa air, renovasi,
+pengecatan, AC, hingga tukang kayu.
+
+</p>
+
+<p>
+
+Kami hadir untuk memberikan kemudahan,
+keamanan, dan kenyamanan dalam mencari jasa
+berkualitas dengan harga yang transparan.
+
+</p>
+
+<div class="about-list">
+
+<div class="item">
+
+<div class="icon">
+✔
+</div>
+
+<div>
+
+<h3>Tukang Profesional</h3>
+
+<span>Berpengalaman dan terpercaya.</span>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="icon">
+✔
+</div>
+
+<div>
+
+<h3>Harga Transparan</h3>
+
+<span>Tidak ada biaya tersembunyi.</span>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="icon">
+✔
+</div>
+
+<div>
+
+<h3>Pelayanan Cepat</h3>
+
+<span>Siap membantu kapan saja.</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>>
+
+<h1 style="font-size:50px;color:#2E86FF;">
+
+</h1>
+
+</section>
+<section id="jasa">
+
+<div class="jasa-title">
+
+<h1>Tersedia Jasa</h1>
+
+<p>
+Kami menyediakan berbagai layanan profesional
+untuk memenuhi kebutuhan rumah Anda.
+</p>
+
+</div>
+
+<div class="jasa-container">
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=1">
+
+<h2>Listrik</h2>
+
+<p>
+Perbaikan instalasi listrik, pemasangan lampu,
+hingga pengecekan kelistrikan rumah.
+</p>
+
+<a href="#">Selengkapnya</a>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=2">
+
+<h2>Pipa Air</h2>
+
+<p>
+Mengatasi kebocoran pipa, saluran mampet,
+hingga pemasangan instalasi air baru.
+</p>
+
+<a href="#">Selengkapnya</a>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=3">
+
+<h2>AC & Elektronik</h2>
+
+<p>
+Servis AC, kipas angin, kulkas,
+dan berbagai peralatan elektronik rumah.
+</p>
+
+<a href="#">Selengkapnya</a>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=4">
+
+<h2>Cat Rumah</h2>
+
+<p>
+Pengecatan rumah bagian dalam maupun luar
+dengan hasil yang rapi.
+</p>
+
+<a href="#">Selengkapnya</a>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=5">
+
+<h2>Tukang Kayu</h2>
+
+<p>
+Pembuatan lemari, meja,
+kusen, pintu, dan furniture lainnya.
+</p>
+
+<a href="#">Selengkapnya</a>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=6">
+
+<h2>Renovasi Rumah</h2>
+
+<p>
+Melayani renovasi rumah,
+kamar mandi, dapur, maupun bangunan lainnya.
+</p>
+
+<a href="#">Selengkapnya</a>
+
+</div>
+
+</div>
+
+</section>
+<footer id="footer">
+
+<div class="wave"></div>
+
+<div class="footer-container">
+
+<div class="footer-logo">
+
+<h2>Rumah<span>Kita</span></h2>
+
+<p>
+RumahKita adalah platform penyedia jasa
+tukang profesional untuk berbagai kebutuhan
+rumah Anda.
+</p>
+
+</div>
+
+<div class="footer-menu">
+
+<h3>Menu</h3>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About Us</a></li>
+
+<li><a href="#jasa">Jasa</a></li>
+
+<li><a href="#">Lain-Lain</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-contact">
+
+<h3>Kontak</h3>
+
+<p>📍 Malang, Indonesia</p>
+
+<p>📞 +62 812-3456-7890</p>
+
+<p>✉ rumahkita@gmail.com</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 RumahKita. All Rights Reserved.
+
+</div>
+
+</footer>
+
+</body>
+</html>
